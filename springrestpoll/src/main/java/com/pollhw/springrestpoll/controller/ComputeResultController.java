@@ -20,7 +20,7 @@ import java.util.Map;
 @RestController
 public class ComputeResultController {
 
-    private static final Logger logger = LoggerFactory.getLogger(ComputeResultController.class);
+    private final Logger logger = LoggerFactory.getLogger(ComputeResultController.class);
 
     @Autowired
     private VoteRepository voteRepository;

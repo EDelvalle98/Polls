@@ -5,7 +5,7 @@ import com.pollhw.springrestpoll.model.Poll;
 import com.pollhw.springrestpoll.repository.PollRepository;
 import com.pollhw.springrestpoll.service.PollService;
 import jakarta.validation.Valid;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -20,7 +20,7 @@ import java.util.Optional;
 
 @RestController
 public class PollController {
-    private static final Logger logger = (Logger) LoggerFactory.getLogger(PollController.class);
+    private final Logger logger = LoggerFactory.getLogger(PollController.class);
 
     @Autowired
     private PollService pollService;

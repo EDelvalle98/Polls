@@ -16,7 +16,7 @@ import java.util.Collection;
 @RestController
 public class VoteController {
 
-    private static final Logger logger = LoggerFactory.getLogger(VoteController.class);
+    private final Logger logger = LoggerFactory.getLogger(VoteController.class);
 
     @Autowired
     private VoteRepository voteRepository;
