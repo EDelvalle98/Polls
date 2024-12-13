@@ -25,7 +25,7 @@ public class PollController {
     @Autowired
     private PollService pollService;
 
-    @GetMapping
+    @GetMapping("/poll")
     public ResponseEntity<Iterable<Poll>> getAllPolls() {
         logger.info("Fetching all polls");
         Iterable<Poll> allPolls = pollService.getAllPolls();
@@ -33,7 +33,7 @@ public class PollController {
         return new ResponseEntity<>(allPolls, HttpStatus.OK);
     }
 
-    @PostMapping
+    @PostMapping("/poll")
     public ResponseEntity<?> createPoll(@Valid @RequestBody Poll poll) {
         logger.info("Creating a new poll with question: {}", poll.getQuestion());
         poll = pollService.createPoll(poll);
